@@ -6,13 +6,13 @@ definetely feel like I've overcomplicated some of them but im quite satisfied wi
 
 In chronological order the projects are:
 
->Ceasar Cipher
->Sub Strings
->Stock Picker
->Bubble Sort
->Tic Tac Toe
->Mastermind
->Event Manager
->Hangman
+- Ceasar Cipher
+- Sub Strings
+- Stock Picker
+- Bubble Sort
+- Tic Tac Toe
+- Mastermind
+- Event Manager
+- Hangman
 
 You can find these in the ruby programming category on The Odin Project website
