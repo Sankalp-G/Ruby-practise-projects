@@ -14,5 +14,6 @@ In chronological order the projects are:
 - Mastermind
 - Event Manager
 - Hangman
+- Custom Enumerables
 
 You can find these in the ruby programming category on The Odin Project website
