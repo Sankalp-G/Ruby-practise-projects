@@ -15,5 +15,6 @@ In chronological order the projects are:
 - Event Manager
 - Hangman
 - Custom Enumerables
+- Merge Sort
 
 You can find these in the ruby programming category on The Odin Project website
