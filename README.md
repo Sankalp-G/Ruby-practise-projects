@@ -16,5 +16,6 @@ In chronological order the projects are:
 - Hangman
 - Custom Enumerables
 - Merge Sort
+- Linked List
 
 You can find these in the ruby programming category on The Odin Project website
