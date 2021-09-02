@@ -17,5 +17,6 @@ In chronological order the projects are:
 - Custom Enumerables
 - Merge Sort
 - Linked List
+- Binary Search Tree
 
 You can find these in the ruby programming category on The Odin Project website
