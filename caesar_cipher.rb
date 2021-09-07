@@ -24,7 +24,7 @@ def caesar_cipher(string, shift_amt)
       cipher.push(str_template_downcase[true_index])
 
     elsif char.between?('A', 'Z')
-      true_index = rolliver24(str_template_upcase.index(char) + shift_amt)
+      true_index = rollover24(str_template_upcase.index(char) + shift_amt)
       cipher.push(str_template_upcase[true_index])
 
     else
