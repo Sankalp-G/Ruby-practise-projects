@@ -18,5 +18,6 @@ In chronological order the projects are:
 - Merge Sort
 - Linked List
 - Binary Search Tree
+- Knights Travails 
 
 You can find these in the ruby programming category on The Odin Project website
