@@ -1,38 +1,40 @@
-def rollover24(num)
-  while num > 24
-    num -= 24
-  end
-  return num
+# makes sure number is between 24
+def rollover26(num)
+  num -= 26 while num >= 26
+
+  num
 end
 
 def caesar_cipher(string, shift_amt)
-  str_template_downcase = []
-  ('a'..'z').each {|letter| str_template_downcase.push(letter)}
+  throw 'invalid shift ammount, must be positive integer' if !shift_amt.is_a?(Integer) || shift_amt.negative?
 
-  str_template_upcase = []
-  ('A'..'Z').each {|letter| str_template_upcase.push(letter)}
+  shift_amt = rollover26(shift_amt)
 
-  chars = string.split("")
+  result = ''
+  string_array = string.split('')
 
-  shift_amt = rollover24(shift_amt)
+  # loop through each letter and append ciphered letter to result
+  string_array.each do |letter|
+    letter_ord = letter.ord
 
-  cipher = []
+    result_ord = shift_amt + letter_ord
 
-  chars.each do |char|
-    if char.between?('a', 'z')
-      true_index = rollover24(str_template_downcase.index(char) + shift_amt)
-      cipher.push(str_template_downcase[true_index])
-
-    elsif char.between?('A', 'Z')
-      true_index = rollover24(str_template_upcase.index(char) + shift_amt)
-      cipher.push(str_template_upcase[true_index])
-
+    # if lowercase
+    if letter_ord.between?(97, 122)
+      result_ord -= 26 if result_ord > 122
+    # if uppercase
+    elsif letter_ord.between?(66, 90)
+      result_ord -= 26 if result_ord > 90
+    # if not an alphabet
     else
-      cipher.push(char)
-
+      result << letter_ord.chr
+      next
     end
+
+    result << result_ord.chr
   end
-  return cipher.join("")
+
+  result
 end
 
-puts caesar_cipher('!boop', 25)
+puts caesar_cipher('!boop', 16)
