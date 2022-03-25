@@ -36,5 +36,3 @@ def caesar_cipher(string, shift_amt)
 
   result
 end
-
-puts caesar_cipher('!boop', 16)
