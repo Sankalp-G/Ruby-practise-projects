@@ -2,8 +2,6 @@ require 'pry-byebug'
 
 # game class
 class TicTacToe
-  private
-
   def initialize
     @blank_tile = ['...........', '.         .', '.         .', '.         .', '...........']
     @x_tile = ['...........', '.  x   x  .', '.    x    .', '.  x   x  .', '...........']
@@ -70,8 +68,6 @@ class TicTacToe
 
     false
   end
-
-  public
 
   def start_game(starting_player = 'x')
     player = starting_player
