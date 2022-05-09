@@ -47,6 +47,8 @@ class TicTacToe
     # update coord board
     @coords[in_coords[0] - 1][in_coords[1] - 1] = player
   rescue StandardError => e
+    raise if e.message == 'Player isnt x or o'
+
     puts e
     retry
   end
@@ -86,6 +88,6 @@ class TicTacToe
   end
 end
 
-new_board = TicTacToe.new
+# new_board = TicTacToe.new
 
-new_board.start_game
+# new_board.start_game
